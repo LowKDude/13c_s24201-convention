@@ -1,6 +1,10 @@
-# Using list comprehension to generate a list of squares of numbers from 1 to 10
-squares = [x ** 2 for x in range(1, 11)]
+def generate_squares(start, end):
+    squares = [x ** 2 for x in range(start, end)]
+    return squares
 
-# Printing the list of squares
-print("List of squares of numbers from 1 to 10:")
-print(squares)
+start = 1
+end = 11
+squares_list = generate_squares(start, end)
+
+print("List of squares of numbers from {} to {}:".format(start, end - 1))
+print(squares_list)

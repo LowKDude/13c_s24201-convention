@@ -1,20 +1,9 @@
-import math
+# Assuming `square_generator.py` is in the same directory as this script
+from square_generator import SquareGenerator
 
-
-class SquareGenerator:
-    def generate_squares(self, start, end):
-
-        if end < start:
-            start, end = end, start
-        return [x ** 2 for x in range(start, end + 1)]
-
-    def square_roots(self, numbers):
-
-        return [math.sqrt(number) for number in numbers]
-
-
+# Example usage
 square_gen = SquareGenerator()
-squares = square_gen.generate_squares(10, 1)
+squares = square_gen.generate_squares(1, 10)
 print("Squares:", squares)
 
 square_roots = square_gen.square_roots(squares)

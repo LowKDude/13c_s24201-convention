@@ -1,10 +1,9 @@
-def generate_squares(start, end):
-    squares = [x ** 2 for x in range(start, end)]
-    return squares
+class SquareGenerator:
+    def generate_squares(self, start, end):
 
-start = 1
-end = 11
-squares_list = generate_squares(start, end)
+        return [x**2 for x in range(start, end + 1)]
 
-print("List of squares of numbers from {} to {}:".format(start, end - 1))
-print(squares_list)
+# Example usage
+square_gen = SquareGenerator()
+squares = square_gen.generate_squares(1, 10)
+print(squares)

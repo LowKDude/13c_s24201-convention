@@ -1,10 +1,9 @@
-def generate_squares(start, end):
-    squares = [x ** 2 for x in range(start, end)]
-    return squares
+from square_generator.cubic_generator import CubicGenerator
 
-start = 1
-end = 11
-squares_list = generate_squares(start, end)
+cubic_gen = CubicGenerator()
 
-print("List of squares of numbers from {} to {}:".format(start, end - 1))
-print(squares_list)
+try:
+    cubes = cubic_gen.generate_squares(1, 5)
+    print("Cubes:", cubes)
+except Exception as e:
+    print(f"Error: {e}")
